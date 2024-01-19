@@ -27,7 +27,7 @@ const sameLength = (actual, expected, message) =>
 const closeTo = function assertNumbersCloseOrOtherwiseExactEquality(
   actual,
   expected,
-  epsilon,
+  epsilon = closeTo.defaultEpsilon,
   message
 ) {
   sameType(actual, expected);
@@ -63,6 +63,8 @@ const unshiftPathItem = (e, key) => {
   e.stack = e.stack.replace(message, e.message);
   return e;
 };
+
+closeTo.defaultEpsilon = 1e-15;
 
 const cleanUpStack = (e, ...names) => {
   const rx = new RegExp(
