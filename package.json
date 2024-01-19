@@ -1,6 +1,6 @@
 {
   "name": "@fordi-org/assert",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper around node:assert for custom assertions",
   "main": "src/index.js",
   "type": "module",
